@@ -27,14 +27,14 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
             {/* Brand Section - Positioned on the left */}
-            <div className="flex items-center min-w-0 shrink">
-              <Link to="/" className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 group min-w-0">
+            <div className="flex items-center min-w-0 shrink lg:shrink-0">
+              <Link to="/" className="flex items-center gap-1.5 sm:gap-2.5 md:gap-3 group min-w-0 lg:min-w-max">
                 <img
                   src={logoImg}
                   alt="Dippis Gardens Logo"
                   className="h-9 sm:h-11 md:h-14 w-auto object-contain mix-blend-multiply shrink-0 transition-transform group-hover:scale-105"
                 />
-                <span className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-serif tracking-wider text-black leading-none whitespace-nowrap truncate">
+                <span className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-serif tracking-wider text-black leading-none whitespace-nowrap truncate lg:overflow-visible">
                   DIPPIS GARDENS
                 </span>
               </Link>
