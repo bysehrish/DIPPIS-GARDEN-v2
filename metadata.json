@@ -1,0 +1,6 @@
+{
+  "name": "Dippis Gardens",
+  "description": "A vibrant multipage website for Dippis Gardens, a Pakistani sauce brand featuring their range of sauces, about us, contact, and shopping cart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

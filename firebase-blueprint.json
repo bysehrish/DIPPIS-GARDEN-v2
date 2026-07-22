@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "order": {
+      "title": "Order",
+      "description": "An order placed by a customer",
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "description": "List of cart items"
+        },
+        "total": {
+          "type": "number",
+          "description": "Total price of the order in Rs"
+        },
+        "status": {
+          "type": "string",
+          "description": "Order status",
+          "enum": ["pending", "dispatched", "completed", "cancelled"]
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Order creation timestamp"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Name of the customer"
+        },
+        "customerAddress": {
+          "type": "string",
+          "description": "Delivery address"
+        },
+        "customerPhone": {
+          "type": "string",
+          "description": "Contact phone number"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "Payment method used",
+          "enum": ["cash_on_delivery"]
+        }
+      },
+      "required": ["items", "total", "status", "createdAt", "customerName", "customerAddress", "customerPhone", "paymentMethod"]
+    }
+  },
+  "firestore": {
+    "orders/{orderId}": {
+      "schema": {
+        "$ref": "#/entities/order"
+      },
+      "description": "Store all customer orders"
+    }
+  }
+}
