@@ -6,7 +6,19 @@ import { defineConfig } from 'vite';
 export default defineConfig(() => {
   return {
     base: '/',
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      {
+        name: 'empty-json-fallback',
+        enforce: 'pre',
+        transform(code, id) {
+          if (id.endsWith('.json') && code.trim() === '') {
+            return '{}';
+          }
+        }
+      },
+      react(),
+      tailwindcss()
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
